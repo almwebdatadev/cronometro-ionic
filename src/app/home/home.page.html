@@ -1,44 +1,46 @@
 <ion-header translucent="true">
   <ion-toolbar color="primary">
-    <ion-title> Cronómetro </ion-title>
+    <ion-title>Cronómetro</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding content-center">
-  <div class="time-display">{{ formattedTime }}</div>
+  <div class="container">
+    <div class="time-display">{{ formattedTime }}</div>
 
-  <div class="buttons">
-    <ion-button
-      expand="block"
-      shape="round"
-      size="large"
-      color="success"
-      (click)="start()"
-      [disabled]="running"
-    >
-      Start
-    </ion-button>
+    <div class="buttons">
+      <ion-button
+        expand="block"
+        shape="round"
+        size="large"
+        color="success"
+        (click)="start()"
+        [disabled]="running"
+      >
+        Start
+      </ion-button>
 
-    <ion-button
-      expand="block"
-      shape="round"
-      size="large"
-      color="warning"
-      (click)="stop()"
-      [disabled]="!running"
-    >
-      Stop
-    </ion-button>
+      <ion-button
+        expand="block"
+        shape="round"
+        size="large"
+        color="warning"
+        (click)="stop()"
+        [disabled]="!running"
+      >
+        Stop
+      </ion-button>
 
-    <ion-button
-      expand="block"
-      shape="round"
-      size="large"
-      color="medium"
-      (click)="reset()"
-      [disabled]="elapsedMs === 0"
-    >
-      Reset
-    </ion-button>
+      <ion-button
+        expand="block"
+        shape="round"
+        size="large"
+        color="medium"
+        (click)="reset()"
+        [disabled]="elapsedMs === 0"
+      >
+        Reset
+      </ion-button>
+    </div>
   </div>
 </ion-content>
